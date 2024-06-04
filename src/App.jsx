@@ -6,7 +6,6 @@ import PageNotFound from "./pages/PageNotFound";
 function App() {
     return (
         <div>
-            <h1>Mega Title de la mort qui tue</h1>
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<Homepage />} />
