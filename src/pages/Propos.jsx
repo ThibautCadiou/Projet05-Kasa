@@ -1,5 +1,12 @@
+import PageNav from "../components/PageNav";
+
 function Propos() {
-    return <div>A Propos</div>;
+    return (
+        <div>
+            <PageNav />
+            <h2>A propos</h2>
+        </div>
+    );
 }
 
 export default Propos;
