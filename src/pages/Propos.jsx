@@ -1,9 +1,9 @@
-import PageNav from "../components/PageNav";
+import Banner from "../components/Banner";
 
 function Propos() {
     return (
         <div>
-            <PageNav />
+            <Banner />
             <h2>A propos</h2>
         </div>
     );

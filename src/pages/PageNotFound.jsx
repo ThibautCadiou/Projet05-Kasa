@@ -1,9 +1,9 @@
-import PageNav from "../components/PageNav";
+import Banner from "../components/Banner";
 
 function PageNotFound() {
     return (
         <div>
-            <PageNav />
+            <Banner />
             <h2>Page not Found budy !</h2>
         </div>
     );

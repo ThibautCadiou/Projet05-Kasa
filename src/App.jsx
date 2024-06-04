@@ -14,6 +14,10 @@ function App() {
                     <Route path="*" element={<PageNotFound />} />
                 </Routes>
             </BrowserRouter>
+            <footer>
+                <p>Logo KASA</p>
+                <p>© 2020 Kasa. All rights reserved</p>
+            </footer>
         </div>
     );
 }
