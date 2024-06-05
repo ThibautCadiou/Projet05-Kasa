@@ -4,7 +4,7 @@ function Propos() {
     return (
         <div>
             <Banner />
-            <h2>A propos</h2>
+            <h2>A propos!!!!!srthrthfghbnsfnhb</h2>
         </div>
     );
 }

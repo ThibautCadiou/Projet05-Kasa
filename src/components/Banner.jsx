@@ -2,10 +2,10 @@ import PageNav from "./PageNav";
 
 function Banner() {
     return (
-        <div>
-            <p>KASA</p>
+        <header>
+            <p>KASA l&apos;aaa</p>
             <PageNav />
-        </div>
+        </header>
     );
 }
 export default Banner;
