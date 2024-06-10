@@ -2,13 +2,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Propos from "./pages/Propos";
 import PageNotFound from "./pages/PageNotFound";
-import Banner from "./components/Banner";
+import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 function App() {
     return (
         <BrowserRouter>
-            <Banner />
+            <Header />
 
             <Routes>
                 <Route path="/" element={<Homepage />} />

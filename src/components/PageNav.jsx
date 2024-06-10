@@ -3,12 +3,12 @@ import { NavLink } from "react-router-dom";
 function PageNav() {
     return (
         <nav>
-            <ul>
-                <li>
-                    <NavLink to="/"> Homepage </NavLink>
+            <ul className="navigation">
+                <li className="navigation-link">
+                    <NavLink to="/"> Accueil </NavLink>
                 </li>
-                <li>
-                    <NavLink to="/propos"> A propos </NavLink>
+                <li className="navigation-link">
+                    <NavLink to="/propos">A Propos</NavLink>
                 </li>
             </ul>
         </nav>

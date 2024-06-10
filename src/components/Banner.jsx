@@ -1,11 +1,9 @@
-import PageNav from "./PageNav";
-
 function Banner() {
     return (
-        <header>
-            <p>KASA l&apos;aaa</p>
-            <PageNav />
-        </header>
+        <div className="banner">
+            <p className="banner__text text-stroke">Chez vous, partout et ailleurs</p>
+        </div>
     );
 }
+
 export default Banner;

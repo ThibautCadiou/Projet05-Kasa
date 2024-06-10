@@ -1,10 +1,14 @@
 import Banner from "../components/Banner";
+import Cards from "../components/Cards";
 
 function Homepage() {
     return (
-        <div>
+        <div className="main">
             <Banner />
-            <h2>Homepage !!!</h2>
+            <div className="affichage-cards">
+                <Cards />
+                <Cards />
+            </div>
         </div>
     );
 }
