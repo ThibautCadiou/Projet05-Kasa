@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 function Cards(props) {
-    // console.log(props);
     return (
         <a href="#">
             <article className="cards" style={{ backgroundImage: `url(${props.imageURL})` }}>
