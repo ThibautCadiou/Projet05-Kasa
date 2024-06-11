@@ -8,6 +8,9 @@ export default function Collapse(props) {
 
     const toggleCollapse = () => {
         setIsOpen(!isOpen);
+        if (isFirstOpening) {
+            setIsFirstOpening(false);
+        }
     };
 
     const toggleFirstOpening = () => {
@@ -16,9 +19,9 @@ export default function Collapse(props) {
 
     return (
         <div className="collapse">
-            <div className="collapse__header" onClick={(toggleCollapse, toggleFirstOpening)}>
+            <div className="collapse__header" onClick={toggleCollapse}>
                 <span className="collapse__header__title">{props.obj.title}</span>
-                <i className={isOpen ? "fa-solid fa-chevron-down collapse__icon--open" : "fa-solid fa-chevron-up collapse__icon--close"}></i>
+                {isFirstOpening ? <i className="fa-solid fa-chevron-up"></i> : <i className={isOpen ? "fa-solid fa-chevron-down collapse__icon--open" : "fa-solid fa-chevron-up collapse__icon--close"}></i>}
             </div>
             {isOpen && <div className="collapse__content">{props.obj.parapgraphe}</div>}
         </div>
