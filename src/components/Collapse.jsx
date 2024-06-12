@@ -23,6 +23,7 @@ export default function Collapse(props) {
                     <i onClick={toggleCollapse} className={isOpen ? "fa-solid fa-chevron-down collapse__icon--open" : "fa-solid fa-chevron-up collapse__icon--close"}></i>
                 )}
             </div>
+
             {isOpen && <div className="collapse__content collapse--show">{props.obj.parapgraphe}</div>}
         </div>
     );
