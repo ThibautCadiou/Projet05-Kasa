@@ -286,6 +286,36 @@ h2 {
     }
 }
 
+// ******** ERROR PAGE ******** //
+.error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 139px;
+    margin-top: 139px;
+    margin-bottom: 139px;
+    color: $my-red;
+
+    &__error-page_logo {
+        display: inline-block;
+        height: 20px;
+    }
+
+    &__main-message {
+        font-size: 21.5rem;
+        font-weight: 800;
+    }
+
+    &__second-message {
+        font-size: 3.6rem;
+        font-weight: 500;
+    }
+    &__back-link {
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: #000;
+    }
+}
 // ******** FOOTER ******** //
 footer {
     display: flex;

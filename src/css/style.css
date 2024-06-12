@@ -217,6 +217,28 @@ h2 {
     opacity: 1;
     transform: translateY(0%); } }
 
+.error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 139px;
+  margin-top: 139px;
+  margin-bottom: 139px;
+  color: #ff6060; }
+  .error-page__error-page_logo {
+    display: inline-block;
+    height: 20px; }
+  .error-page__main-message {
+    font-size: 21.5rem;
+    font-weight: 800; }
+  .error-page__second-message {
+    font-size: 3.6rem;
+    font-weight: 500; }
+  .error-page__back-link {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #000; }
+
 footer {
   display: flex;
   flex-direction: column;
