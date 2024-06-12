@@ -214,7 +214,7 @@ h2 {
 
 .collapse--show {
     animation-name: translateCollapsingElementOpening;
-    animation-duration: 0.3s;
+    animation-duration: 0.4s;
     animation-timing-function: ease-out;
     z-index: 1;
     position: relative;
@@ -250,21 +250,39 @@ h2 {
 
 @keyframes translateCollapsingElementOpening {
     0% {
+        opacity: 0;
         transform: translateY(-100%);
     }
-
+    10% {
+        opacity: 0;
+        transform: translateY(-44px);
+    }
+    11% {
+        opacity: 1;
+        transform: translateY(-54px);
+    }
     100% {
+        opacity: 1;
         transform: translateY(0%);
     }
 }
 
 @keyframes translateCollapsingElementClosing {
     0% {
+        opacity: 0;
         transform: translateY(0%);
     }
-
+    10% {
+        opacity: 0;
+        transform: translateY(-44px);
+    }
+    11% {
+        opacity: 1;
+        transform: translateY(-54px);
+    }
     100% {
-        transform: translateY(-100%);
+        opacity: 1;
+        transform: translateY(0%);
     }
 }
 
