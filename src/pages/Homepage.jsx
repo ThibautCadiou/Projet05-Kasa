@@ -8,7 +8,7 @@ function Homepage() {
             <Banner msg="Chez vous, partout et ailleurs" backgroundImageUrl="src/assets/image-source-1.jpg" />
             <div className="affichage-cards">
                 {logementsData.map((logement) => (
-                    <Cards name={logement.title} imageURL={logement.pictures[0]} key={logement.id} />
+                    <Cards name={logement.title} imageURL={logement.pictures[0]} id={logement.id} key={logement.id} />
                 ))}
             </div>
         </div>
