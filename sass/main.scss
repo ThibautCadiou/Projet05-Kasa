@@ -290,19 +290,77 @@ h2 {
 // ******** LOGEMENT PAGE ******** //
 .logement-caroussel {
     display: flex;
+    position: relative;
     height: 415px;
 
-    object-fit: contain;
-    position: relative;
-    border: solid 2px red;
     overflow: hidden;
     border-radius: 25px;
 
-    &____image {
-        object-fit: contain;
+    &__image {
+        background-position: bottom;
+        object-fit: cover;
+        object-position: center;
         width: 100%;
         height: 100%;
         border-radius: 25px;
+    }
+
+    &__left-arrow {
+        position: absolute;
+        left: 24px;
+        top: calc(50% - 40px);
+    }
+
+    &__right-arrow {
+        position: absolute;
+        right: 24px;
+        top: calc(50% - 40px);
+    }
+}
+
+.logement-info {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    &-left {
+        width: 50%;
+        position: relative;
+        &__title {
+            color: $my-red;
+            font-size: 36px;
+            font-weight: 500;
+        }
+        &__subtitle {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        &__tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        &__tag {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-weight: 600;
+            height: 25px;
+            color: white;
+            border-radius: 10px;
+            min-width: 115px;
+            padding-right: 10px;
+            padding-left: 10px;
+            background-color: $my-red;
+            font-size: 1.4rem;
+        }
+    }
+    &-right {
+        border: solid 2px blue;
+        width: 50%;
+        position: relative;
     }
 }
 
