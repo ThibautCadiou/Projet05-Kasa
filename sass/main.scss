@@ -55,6 +55,11 @@ h2 {
         &:hover {
             text-decoration: underline;
         }
+
+        & .underlined {
+            text-decoration: underline;
+            color: blue;
+        }
     }
 }
 
@@ -103,6 +108,11 @@ h2 {
 .text-stroke {
     text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
+
+.underlined {
+    text-decoration: underline !important;
+}
+
 // ******** CARDS ******** //
 .affichage-cards {
     display: grid;

@@ -36,6 +36,9 @@ h2 {
     font-weight: 500; }
     .navigation a:hover {
       text-decoration: underline; }
+    .navigation a .underlined {
+      text-decoration: underline;
+      color: blue; }
 
 .main {
   display: flex;
@@ -74,6 +77,9 @@ h2 {
 
 .text-stroke {
   text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
+
+.underlined {
+  text-decoration: underline !important; }
 
 .affichage-cards {
   display: grid;
