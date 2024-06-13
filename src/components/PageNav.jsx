@@ -8,19 +8,8 @@ export default function PageNav() {
     const sayLocation = (a) => {
         setTimeout(() => {
             setMyPath(a.pathname);
-            console.log(myPath);
         }, 50);
-
-        if (myPath === "/") {
-            console.log("yes");
-        } else {
-            console.log("no");
-        }
     };
-
-    // const sayHello =()=>{
-    //     console.log("Hello");
-    // }
 
     return (
         <nav>
