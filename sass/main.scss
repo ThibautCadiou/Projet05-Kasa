@@ -220,14 +220,6 @@ h2 {
     position: relative;
 }
 
-.collapse--hide {
-    animation-name: translateCollapsingElementClosing;
-    animation-duration: 0.3s;
-    animation-timing-function: ease-out;
-    z-index: 1;
-    position: relative;
-}
-
 @keyframes rotateChevronOpening {
     0% {
         transform: rotate(180deg);
@@ -267,22 +259,33 @@ h2 {
     }
 }
 
+.collapse--hide {
+    animation: translateCollapsingElementClosing ease-out 0.3s;
+    z-index: 1;
+    position: relative;
+}
+
+.hide {
+    display: none;
+}
 @keyframes translateCollapsingElementClosing {
     0% {
-        opacity: 0;
+        opacity: 1;
+        // transform: scaleY(1);
         transform: translateY(0%);
     }
-    10% {
-        opacity: 0;
-        transform: translateY(-44px);
-    }
-    11% {
-        opacity: 1;
-        transform: translateY(-54px);
-    }
+    // 10% {
+    //     opacity: 1;
+    //     // transform: translateY(-44px);
+    // }
+    // 11% {
+    //     opacity: 0;
+    //     // transform: translateY(-54px);
+    // }
     100% {
         opacity: 1;
-        transform: translateY(0%);
+        // transform: scaleY(0);
+        transform: translateY(-100%);
     }
 }
 

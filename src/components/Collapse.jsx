@@ -5,12 +5,17 @@ import React, { useState } from "react";
 export default function Collapse(props) {
     const [isOpen, setIsOpen] = useState(false);
     const [isFirstOpening, setIsFirstOpening] = useState(true);
+    const [isAnimationFinished, setisAnimationFinished] = useState(false);
 
     const toggleCollapse = () => {
         setIsOpen(!isOpen);
         if (isFirstOpening) {
             setIsFirstOpening(false);
         }
+
+        setTimeout(() => {
+            setisAnimationFinished(true);
+        }, 3000); // 300ms delay
     };
 
     return (
@@ -24,7 +29,7 @@ export default function Collapse(props) {
                 )}
             </div>
 
-            {isOpen && <div className="collapse__content collapse--show">{props.obj.parapgraphe}</div>}
+            {isOpen ? <div className="collapse__content collapse--show">{props.obj.parapgraphe}</div> : <div className={isFirstOpening ? "hide" : "collapse__content collapse--hide"}>{props.obj.parapgraphe}</div>}
         </div>
     );
 }
