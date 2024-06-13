@@ -154,24 +154,17 @@ h2 {
 
 .collapse__icon--open {
   animation-name: rotateChevronOpening;
-  animation-duration: 0.5s;
+  animation-duration: 0.3s;
   animation-timing-function: ease-out; }
 
 .collapse__icon--close {
   animation-name: rotateChevronClosing;
-  animation-duration: 0.5s;
+  animation-duration: 0.3s;
   animation-timing-function: ease-out; }
 
 .collapse--show {
-  animation-name: translateCollapsingElement;
-  animation-duration: 0.3s;
-  animation-timing-function: ease-out;
-  z-index: 1;
-  position: relative; }
-
-.collapse--show {
   animation-name: translateCollapsingElementOpening;
-  animation-duration: 0.4s;
+  animation-duration: 0.3s;
   animation-timing-function: ease-out;
   z-index: 1;
   position: relative; }
@@ -194,10 +187,10 @@ h2 {
     transform: translateY(-100%); }
   10% {
     opacity: 0;
-    transform: translateY(-44px); }
+    transform: translateY(-40px); }
   11% {
     opacity: 1;
-    transform: translateY(-54px); }
+    transform: translateY(-40px); }
   100% {
     opacity: 1;
     transform: translateY(0%); } }
@@ -214,6 +207,12 @@ h2 {
   0% {
     opacity: 1;
     transform: translateY(0%); }
+  90% {
+    opacity: 1;
+    transform: translateY(-50px); }
+  91% {
+    opacity: 0;
+    transform: translateY(-10px); }
   100% {
     opacity: 1;
     transform: translateY(-100%); } }

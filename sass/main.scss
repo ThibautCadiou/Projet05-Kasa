@@ -2,7 +2,7 @@
 $my-color: pink;
 $light-grey: #f6f6f6;
 $my-red: #ff6060;
-
+$animation-time: 0.3s;
 * {
     margin: 0;
     padding: 0;
@@ -202,29 +202,19 @@ h2 {
 
 .collapse__icon--open {
     animation-name: rotateChevronOpening;
-    animation-duration: 0.5s;
+    animation-duration: $animation-time;
     animation-timing-function: ease-out;
-    // animation-fill-mode: backwards;
 }
 
 .collapse__icon--close {
     animation-name: rotateChevronClosing;
-    animation-duration: 0.5s;
+    animation-duration: $animation-time;
     animation-timing-function: ease-out;
-    // animation-fill-mode: backwards;
-}
-
-.collapse--show {
-    animation-name: translateCollapsingElement;
-    animation-duration: 0.3s;
-    animation-timing-function: ease-out;
-    z-index: 1;
-    position: relative;
 }
 
 .collapse--show {
     animation-name: translateCollapsingElementOpening;
-    animation-duration: 0.4s;
+    animation-duration: $animation-time;
     animation-timing-function: ease-out;
     z-index: 1;
     position: relative;
@@ -257,11 +247,11 @@ h2 {
     }
     10% {
         opacity: 0;
-        transform: translateY(-44px);
+        transform: translateY(-40px);
     }
     11% {
         opacity: 1;
-        transform: translateY(-54px);
+        transform: translateY(-40px);
     }
     100% {
         opacity: 1;
@@ -270,7 +260,7 @@ h2 {
 }
 
 .collapse--hide {
-    animation: translateCollapsingElementClosing ease-out 0.3s;
+    animation: translateCollapsingElementClosing ease-out $animation-time;
     z-index: 1;
     position: relative;
 }
@@ -281,20 +271,18 @@ h2 {
 @keyframes translateCollapsingElementClosing {
     0% {
         opacity: 1;
-        // transform: scaleY(1);
         transform: translateY(0%);
     }
-    // 10% {
-    //     opacity: 1;
-    //     // transform: translateY(-44px);
-    // }
-    // 11% {
-    //     opacity: 0;
-    //     // transform: translateY(-54px);
-    // }
+    90% {
+        opacity: 1;
+        transform: translateY(-50px);
+    }
+    91% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
     100% {
         opacity: 1;
-        // transform: scaleY(0);
         transform: translateY(-100%);
     }
 }
