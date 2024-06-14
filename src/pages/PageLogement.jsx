@@ -1,8 +1,15 @@
 /* eslint-disable react/prop-types */
 
 import Tags from "../components/Tags";
+import Star from "../components/Star";
 
 export default function PageLogement({ logementObj }) {
+    const firstName = logementObj.host.name.split(" ")[0];
+    const lastName = logementObj.host.name.split(" ")[1];
+
+    console.log(firstName);
+    console.log(lastName);
+
     return (
         <div className="main main-logement">
             <div className="logement-caroussel">
@@ -22,9 +29,16 @@ export default function PageLogement({ logementObj }) {
                     </div>
                 </div>
                 <div className="logement-info-right">
-                    <div className="owner-infos">A</div>
-                    <div className="owner-image">B</div>
-                    <div className="owner-ratings">C</div>
+                    <div className="logement-info-right__owner-image">
+                        <img src={logementObj.host.picture} alt="Owner picture" />
+                    </div>
+                    <div className="logement-info-right__owner-infos">
+                        <p>{firstName}</p>
+                        <p>{lastName}</p>
+                    </div>
+                    <div className="logement-info-right__owner-ratings">
+                        <Star starsNumber={3}></Star>
+                    </div>
                 </div>
             </div>
             <div className="logement-collapses">
