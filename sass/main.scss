@@ -400,6 +400,22 @@ h2 {
     }
 }
 
+.logement-collapses {
+    display: flex;
+    justify-content: space-between;
+    gap: 6%;
+    margin-bottom: 50px;
+    border: solid 2px red;
+    &__left {
+        width: 100%;
+        border: solid 2px purple;
+    }
+    &__right {
+        width: 100%;
+        border: solid 2px purple;
+    }
+}
+
 // ******** ERROR PAGE ******** //
 .error-page {
     display: flex;

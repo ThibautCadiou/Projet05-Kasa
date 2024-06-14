@@ -306,6 +306,19 @@ h2 {
       width: 191px;
       justify-content: space-between; }
 
+.logement-collapses {
+  display: flex;
+  justify-content: space-between;
+  gap: 6%;
+  margin-bottom: 50px;
+  border: solid 2px red; }
+  .logement-collapses__left {
+    width: 100%;
+    border: solid 2px purple; }
+  .logement-collapses__right {
+    width: 100%;
+    border: solid 2px purple; }
+
 .error-page {
   display: flex;
   flex-direction: column;

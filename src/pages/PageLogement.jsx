@@ -2,13 +2,21 @@
 
 import Tags from "../components/Tags";
 import Star from "../components/Star";
+import Collapse from "../components/Collapse";
 
 export default function PageLogement({ logementObj }) {
     const firstName = logementObj.host.name.split(" ")[0];
     const lastName = logementObj.host.name.split(" ")[1];
 
-    console.log(firstName);
-    console.log(lastName);
+    const messageDescription = {
+        title: "Description",
+        parapgraphe: logementObj.description,
+    };
+
+    const messageEquipement = {
+        title: "Equipement",
+        parapgraphe: logementObj.equipments,
+    };
 
     return (
         <div className="main main-logement">
@@ -42,8 +50,11 @@ export default function PageLogement({ logementObj }) {
                 </div>
             </div>
             <div className="logement-collapses">
-                <p>elt 1</p>
-                <p>elt 2</p>
+                {/* <p className="logement-collapses__left"> */}
+                <Collapse obj={messageDescription} />
+                <Collapse obj={messageEquipement} />
+
+                {/* <p className="logement-collapses__right">B</p> */}
             </div>
         </div>
     );
