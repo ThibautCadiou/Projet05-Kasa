@@ -53,7 +53,7 @@ h2 {
   background-size: cover;
   background-position: center;
   position: relative; }
-  .banner .banner__text {
+  .banner__text {
     color: white;
     font-size: 4.8rem;
     font-weight: 700;
@@ -63,7 +63,7 @@ h2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
-  .banner .banner__text::after {
+  .banner__text::after {
     content: "Chez vous, partout et ailleurs";
     display: inline-block;
     color: blue;
@@ -154,17 +154,17 @@ h2 {
 
 .collapse__icon--open {
   animation-name: rotateChevronOpening;
-  animation-duration: 0.3s;
+  animation-duration: 0.2s;
   animation-timing-function: ease-out; }
 
 .collapse__icon--close {
   animation-name: rotateChevronClosing;
-  animation-duration: 0.3s;
+  animation-duration: 0.2s;
   animation-timing-function: ease-out; }
 
 .collapse--show {
   animation-name: translateCollapsingElementOpening;
-  animation-duration: 0.3s;
+  animation-duration: 0.2s;
   animation-timing-function: ease-out;
   z-index: 1;
   position: relative; }
@@ -196,7 +196,7 @@ h2 {
     transform: translateY(0%); } }
 
 .collapse--hide {
-  animation: translateCollapsingElementClosing ease-out 0.3s;
+  animation: translateCollapsingElementClosing ease-out 0.2s;
   z-index: 1;
   position: relative; }
 
@@ -209,10 +209,10 @@ h2 {
     transform: translateY(0%); }
   90% {
     opacity: 1;
-    transform: translateY(-50px); }
+    transform: translateY(-40px); }
   91% {
     opacity: 0;
-    transform: translateY(-10px); }
+    transform: translateY(-40px); }
   100% {
     opacity: 1;
     transform: translateY(-100%); } }
@@ -238,6 +238,14 @@ h2 {
     position: absolute;
     right: 24px;
     top: calc(50% - 40px); }
+  .logement-caroussel__nbImage {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 400;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%); }
 
 .logement-info {
   display: flex;
@@ -310,14 +318,16 @@ h2 {
   display: flex;
   justify-content: space-between;
   gap: 6%;
-  margin-bottom: 50px;
-  border: solid 2px red; }
+  margin-bottom: 50px; }
   .logement-collapses__left {
-    width: 100%;
-    border: solid 2px purple; }
+    width: 100%; }
   .logement-collapses__right {
-    width: 100%;
-    border: solid 2px purple; }
+    width: 100%; }
+
+.isList ul {
+  list-style-type: none; }
+  .isList ul li {
+    font-size: 1.4rem; }
 
 .error-page {
   display: flex;

@@ -14,7 +14,7 @@ export default function Collapse(props) {
         } else {
             setTimeout(() => {
                 setisAnimationFinished(true);
-            }, 200);
+            }, 190);
         }
 
         if (isFirstOpening) {
@@ -47,7 +47,21 @@ export default function Collapse(props) {
                     )}
                 </div>
 
-                {isOpen ? <div className="collapse__content collapse--show">{props.obj.parapgraphe}</div> : <div className={isFirstOpening ? "hide" : "collapse__content collapse--hide"}>{props.obj.parapgraphe}</div>}
+                {isOpen ? (
+                    <div className={props.obj.title === "Equipement" ? "collapse__content collapse--show isList" : "collapse__content collapse--show"}>
+                        {props.obj.title === "Equipement" ? (
+                            <ul>
+                                {props.obj.parapgraphe.map((elt, index) => (
+                                    <li key={index}>{elt}</li>
+                                ))}
+                            </ul>
+                        ) : (
+                            props.obj.parapgraphe
+                        )}
+                    </div>
+                ) : (
+                    <div className={isFirstOpening ? "hide" : "collapse__content collapse--hide"}>{props.obj.parapgraphe}</div>
+                )}
             </div>
         );
     }

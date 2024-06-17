@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { useState } from "react";
 
 import Tags from "../components/Tags";
 import Star from "../components/Star";
@@ -18,12 +19,39 @@ export default function PageLogement({ logementObj }) {
         parapgraphe: logementObj.equipments,
     };
 
+    // Partie caroussel
+    const nbImages = logementObj.pictures.length;
+    const hasOnePicture = nbImages > 1 ? true : false;
+    const [currentImageIndex, setCurrentImageIndex] = useState(1); // le numéro de 1 à 5 ...
+    const [currentImage, setImage] = useState(logementObj.pictures[0]); // l'image de [0] à [4]
+
+    const increaseImageIndex = () => {
+        if (currentImageIndex >= nbImages) {
+            setCurrentImageIndex(1);
+            setImage(logementObj.pictures[0]);
+        } else {
+            setCurrentImageIndex(currentImageIndex + 1);
+            setImage(logementObj.pictures[currentImageIndex]);
+        }
+    };
+
+    const decreaseImageIndex = () => {
+        if (currentImageIndex === 1) {
+            setCurrentImageIndex(nbImages);
+            setImage(logementObj.pictures[nbImages - 1]);
+        } else {
+            setCurrentImageIndex(currentImageIndex - 1);
+            setImage(logementObj.pictures[currentImageIndex - 2]); // le changement ne se fait pas...
+        }
+    };
+
     return (
         <div className="main main-logement">
             <div className="logement-caroussel">
-                <img className="logement-caroussel__image" src={logementObj.pictures[0]} alt="Photo logement" />
-                <img className="logement-caroussel__left-arrow" src="src/assets/arrow-left.svg" alt="fleche gauche" />
-                <img className="logement-caroussel__right-arrow" src="src/assets/arrow-right.svg" alt="fleche droite" />
+                <img className="logement-caroussel__image" src={currentImage} alt="Photo logement" />
+                {hasOnePicture && <img className="logement-caroussel__left-arrow" src="src/assets/arrow-left.svg" alt="fleche gauche" onClick={decreaseImageIndex} />}
+                {hasOnePicture && <img className="logement-caroussel__right-arrow" src="src/assets/arrow-right.svg" alt="fleche droite" onClick={increaseImageIndex} />}
+                {hasOnePicture && <p className="logement-caroussel__nbImage"> {`${currentImageIndex}/${nbImages}`}</p>}
             </div>
 
             <div className="logement-info">

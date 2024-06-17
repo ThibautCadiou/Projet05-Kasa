@@ -2,7 +2,7 @@
 $my-color: pink;
 $light-grey: #f6f6f6;
 $my-red: #ff6060;
-$animation-time: 0.3s;
+$animation-time: 0.2s;
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +16,24 @@ $animation-time: 0.3s;
     font-size: 10px;
 }
 
+// ******** MIXIN MANAGER ******** //
+@mixin reponsive($breakpoint) {
+    @if (breakpoint == phone) {
+        @media (max-width: 600px) {
+            @content;
+        }
+    }
+    @if (breakpoint == tablette) {
+        @media (max-width: 960px) {
+            @content;
+        }
+    }
+    @if (breakpoint == desktop) {
+        @media (max-width: 600px) {
+            @content;
+        }
+    }
+}
 // ******** HEADER ******** //
 .header {
     display: flex;
@@ -80,7 +98,7 @@ h2 {
     background-position: center;
 
     position: relative;
-    .banner__text {
+    &__text {
         color: white;
         font-size: 4.8rem;
         font-weight: 700;
@@ -91,7 +109,7 @@ h2 {
         left: 50%;
         transform: translate(-50%, -50%);
     }
-    .banner__text::after {
+    &__text::after {
         content: "Chez vous, partout et ailleurs";
         display: inline-block;
         color: blue;
@@ -275,11 +293,11 @@ h2 {
     }
     90% {
         opacity: 1;
-        transform: translateY(-50px);
+        transform: translateY(-40px);
     }
     91% {
         opacity: 0;
-        transform: translateY(-10px);
+        transform: translateY(-40px);
     }
     100% {
         opacity: 1;
@@ -315,6 +333,16 @@ h2 {
         position: absolute;
         right: 24px;
         top: calc(50% - 40px);
+    }
+
+    &__nbImage {
+        color: white;
+        font-size: 1.8rem;
+        font-weight: 400;
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
@@ -405,17 +433,23 @@ h2 {
     justify-content: space-between;
     gap: 6%;
     margin-bottom: 50px;
-    border: solid 2px red;
     &__left {
         width: 100%;
-        border: solid 2px purple;
     }
     &__right {
         width: 100%;
-        border: solid 2px purple;
     }
 }
 
+.isList {
+    ul {
+        list-style-type: none;
+
+        li {
+            font-size: 1.4rem;
+        }
+    }
+}
 // ******** ERROR PAGE ******** //
 .error-page {
     display: flex;
