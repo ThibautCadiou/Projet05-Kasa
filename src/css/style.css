@@ -430,12 +430,19 @@ footer {
   height: 210px;
   color: white;
   background-color: black;
-  gap: 30px; }
+  gap: 15px; }
   footer img {
     width: 122px;
     margin-top: 66px; }
   footer p {
     display: flex;
     color: white;
-    align-items: baseline;
-    font-weight: 400; }
+    font-weight: 500; }
+    @media (max-width: 450px) {
+      footer p {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 130px;
+        font-size: 12px;
+        align-items: center; } }

@@ -572,7 +572,7 @@ footer {
     height: 210px;
     color: white;
     background-color: black;
-    gap: 30px;
+    gap: 15px;
 
     img {
         width: 122px;
@@ -582,8 +582,15 @@ footer {
     p {
         display: flex;
         color: white;
-        // border: solid blue 2px;
-        align-items: baseline;
-        font-weight: 400;
+        // align-items: baseline;
+        font-weight: 500;
+        @include reponsive(phone) {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            width: 130px;
+            font-size: 12px;
+            align-items: center;
+        }
     }
 }
