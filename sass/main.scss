@@ -137,10 +137,12 @@ h2 {
 
     @include reponsive(tablette) {
         margin: 0 20px;
+        gap: 30px;
     }
 
     @include reponsive(phone) {
         margin: 0 20px;
+        gap: 20px;
     }
 }
 
@@ -152,7 +154,14 @@ h2 {
     background-size: cover;
     background-position: center;
     position: relative;
-
+    @include reponsive(tablette) {
+        height: 167px;
+        border-radius: 18px;
+    }
+    @include reponsive(phone) {
+        height: 111px;
+        border-radius: 10px;
+    }
     &__text {
         display: inline-block;
         color: white;
@@ -218,7 +227,7 @@ h2 {
 .affichage-cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 60px;
+    gap: 20px;
     background-color: $light-grey;
     border-radius: 25px;
     margin-bottom: 50px;
@@ -227,6 +236,16 @@ h2 {
 
     padding: 56px 50px 50px 50px;
     position: relative;
+    @include reponsive(tablette) {
+        grid-template-columns: 1fr;
+        padding: 0;
+        background: none;
+    }
+    @include reponsive(phone) {
+        grid-template-columns: 1fr;
+        padding: 0;
+        background: none;
+    }
 }
 
 .cards {
@@ -237,6 +256,14 @@ h2 {
     background-position: center;
 
     position: relative;
+
+    @include reponsive(tablette) {
+        height: 300px;
+    }
+
+    @include reponsive(phone) {
+        height: 255px;
+    }
 
     .cards__name {
         position: absolute;
