@@ -20,7 +20,7 @@ export default function Banner(props) {
 
     return (
         <div className="banner" style={backgroundImageStyle}>
-            {haveMessage && <p className={bannerClass}>{props.msg}</p>}{" "}
+            {haveMessage && <p className={bannerClass}>{props.msg}</p>}
         </div>
     );
 }
