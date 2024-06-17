@@ -12,6 +12,9 @@
   display: flex;
   justify-content: space-between;
   margin: 45px 100px 50px 100px; }
+  @media (max-width: 400px) {
+    .header {
+      margin: 20px; } }
   .header img {
     display: block;
     height: 68px; }
@@ -34,6 +37,11 @@ h2 {
     text-decoration: none;
     color: black;
     font-weight: 500; }
+    @media (max-width: 400px) {
+      .navigation a {
+        text-transform: uppercase;
+        color: pink;
+        font-size: 1.2em; } }
     .navigation a:hover {
       text-decoration: underline; }
     .navigation a .underlined {
