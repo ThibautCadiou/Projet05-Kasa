@@ -166,7 +166,7 @@ h2 {
 .affichage-cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+  gap: 50px;
   background-color: #f6f6f6;
   border-radius: 25px;
   margin-bottom: 50px;
@@ -178,11 +178,13 @@ h2 {
       grid-template-columns: 1fr;
       padding: 0;
       background: none;
+      gap: 36px;
       margin-bottom: 20px; } }
   @media (max-width: 450px) {
     .affichage-cards {
       grid-template-columns: 1fr;
       padding: 0;
+      gap: 22px;
       background: none;
       margin-bottom: 20px; } }
 
@@ -219,6 +221,12 @@ h2 {
   height: fit-content;
   border-radius: 5px;
   position: relative; }
+  @media (max-width: 960px) {
+    .collapse {
+      width: 85%; } }
+  @media (max-width: 450px) {
+    .collapse {
+      width: 100%; } }
 
 .collapse__header {
   position: relative;
@@ -437,19 +445,48 @@ h2 {
   margin-top: 139px;
   margin-bottom: 139px;
   color: #ff6060; }
-  .error-page__error-page_logo {
-    display: inline-block;
-    height: 20px; }
+  @media (max-width: 960px) {
+    .error-page {
+      gap: 120px;
+      margin-top: 120px;
+      margin-bottom: 120px; } }
+  @media (max-width: 450px) {
+    .error-page {
+      gap: 112px;
+      margin-top: 112px;
+      margin-bottom: 112px; } }
+  .error-page__logo {
+    display: inline-block; }
+    @media (max-width: 960px) {
+      .error-page__logo {
+        height: 180px; } }
+    @media (max-width: 450px) {
+      .error-page__logo {
+        height: 100px; } }
   .error-page__main-message {
     font-size: 21.5rem;
     font-weight: 800; }
   .error-page__second-message {
     font-size: 3.6rem;
     font-weight: 500; }
+    @media (max-width: 960px) {
+      .error-page__second-message {
+        font-size: 32px;
+        text-align: center;
+        width: 76%; } }
+    @media (max-width: 450px) {
+      .error-page__second-message {
+        font-size: 18px; } }
   .error-page__back-link {
     font-size: 1.8rem;
     font-weight: 500;
     color: #000; }
+    @media (max-width: 960px) {
+      .error-page__back-link {
+        font-size: 16px; } }
+    @media (max-width: 450px) {
+      .error-page__back-link {
+        font-size: 14px; } }
 
 footer {
   display: flex;

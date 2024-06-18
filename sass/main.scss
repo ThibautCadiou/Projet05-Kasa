@@ -227,7 +227,7 @@ h2 {
 .affichage-cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    gap: 50px;
     background-color: $light-grey;
     border-radius: 25px;
     margin-bottom: 50px;
@@ -240,11 +240,14 @@ h2 {
         grid-template-columns: 1fr;
         padding: 0;
         background: none;
+        gap: 36px;
         margin-bottom: 20px;
     }
     @include reponsive(phone) {
         grid-template-columns: 1fr;
         padding: 0;
+        gap: 22px;
+
         background: none;
         margin-bottom: 20px;
     }
@@ -292,6 +295,13 @@ h2 {
     height: fit-content;
     border-radius: 5px;
     position: relative;
+    @include reponsive(tablette) {
+        width: 85%;
+    }
+
+    @include reponsive(phone) {
+        width: 100%;
+    }
 }
 
 .collapse__header {
@@ -571,10 +581,25 @@ h2 {
     margin-top: 139px;
     margin-bottom: 139px;
     color: $my-red;
+    @include reponsive(tablette) {
+        gap: 120px;
+        margin-top: 120px;
+        margin-bottom: 120px;
+    }
+    @include reponsive(phone) {
+        gap: 112px;
+        margin-top: 112px;
+        margin-bottom: 112px;
+    }
 
-    &__error-page_logo {
+    &__logo {
         display: inline-block;
-        height: 20px;
+        @include reponsive(tablette) {
+            height: 180px;
+        }
+        @include reponsive(phone) {
+            height: 100px;
+        }
     }
 
     &__main-message {
@@ -585,11 +610,25 @@ h2 {
     &__second-message {
         font-size: 3.6rem;
         font-weight: 500;
+        @include reponsive(tablette) {
+            font-size: 32px;
+            text-align: center;
+            width: 76%;
+        }
+        @include reponsive(phone) {
+            font-size: 18px;
+        }
     }
     &__back-link {
         font-size: 1.8rem;
         font-weight: 500;
         color: #000;
+        @include reponsive(tablette) {
+            font-size: 16px;
+        }
+        @include reponsive(phone) {
+            font-size: 14px;
+        }
     }
 }
 // ******** FOOTER ******** //
