@@ -351,7 +351,7 @@ h2 {
 
     @include reponsive(phone) {
         font-size: 12px;
-        padding: 13px;
+        padding: 11px;
     }
 }
 
@@ -470,6 +470,14 @@ h2 {
     overflow: hidden;
     border-radius: 25px;
 
+    @include reponsive(tablette) {
+        height: 335px;
+    }
+
+    @include reponsive(phone) {
+        height: 255px;
+    }
+
     &__image {
         background-position: bottom;
         object-fit: cover;
@@ -483,12 +491,30 @@ h2 {
         position: absolute;
         left: 24px;
         top: calc(50% - 40px);
+        @include reponsive(tablette) {
+            height: 20px;
+            top: calc(50% - 20px);
+        }
+
+        @include reponsive(phone) {
+            height: 20px;
+            top: calc(50% - 10px);
+        }
     }
 
     &__right-arrow {
         position: absolute;
         right: 24px;
         top: calc(50% - 40px);
+        @include reponsive(tablette) {
+            height: 20px;
+            top: calc(50% - 15px);
+        }
+
+        @include reponsive(phone) {
+            height: 20px;
+            top: calc(50% - 10px);
+        }
     }
 
     &__nbImage {
@@ -499,26 +525,52 @@ h2 {
         bottom: 25px;
         left: 50%;
         transform: translateX(-50%);
+        @include reponsive(tablette) {
+            display: none;
+        }
+
+        @include reponsive(phone) {
+            height: 255px;
+        }
     }
 }
 
 .logement-info {
     display: flex;
+    flex-direction: column;
     width: 100%;
     justify-content: space-between;
 
     &-left {
         width: 50%;
         position: relative;
+        @include reponsive(tablette) {
+            width: 100%;
+        }
         &__title {
             color: $my-red;
             font-size: 36px;
             font-weight: 500;
+            @include reponsive(tablette) {
+                font-size: 24px;
+            }
+
+            @include reponsive(phone) {
+                font-size: 18px;
+            }
         }
         &__subtitle {
             font-size: 18px;
             font-weight: 500;
             margin-bottom: 20px;
+            @include reponsive(tablette) {
+                margin-top: 5px;
+                font-size: 16px;
+            }
+
+            @include reponsive(phone) {
+                font-size: 14px;
+            }
         }
         &__tags {
             display: flex;
@@ -539,11 +591,30 @@ h2 {
             padding-left: 10px;
             background-color: $my-red;
             font-size: 1.4rem;
+            @include reponsive(tablette) {
+                margin-top: 5px;
+                font-size: 12px;
+                min-width: 84px;
+            }
+
+            @include reponsive(phone) {
+                font-size: 10px;
+            }
         }
     }
     &-right {
         width: 50%;
         position: relative;
+
+        @include reponsive(tablette) {
+            width: 100%;
+            height: 33px;
+            margin: 16px 0px;
+        }
+        @include reponsive(phone) {
+            height: 33px;
+            margin: 16px 0px;
+        }
         &__owner-image {
             position: absolute;
             top: 0;
@@ -554,6 +625,15 @@ h2 {
             justify-content: center;
             vertical-align: center;
             overflow: hidden;
+            @include reponsive(tablette) {
+                width: 48px;
+                height: 48px;
+            }
+            @include reponsive(phone) {
+                width: 32px;
+                height: 32px;
+            }
+
             img {
                 width: 100%;
                 height: 100%;
@@ -564,12 +644,22 @@ h2 {
         }
         &__owner-infos {
             position: absolute;
-            right: calc(64px + 10px);
+            right: calc(32px + 10px);
             display: flex;
             flex-direction: column;
             color: $my-red;
             font-size: 1.8rem;
             align-items: flex-end;
+            // border: solid purple 2px;
+
+            & p {
+                @include reponsive(tablette) {
+                    font-size: 15px;
+                }
+                @include reponsive(phone) {
+                    font-size: 12px;
+                }
+            }
         }
         &__owner-ratings {
             position: absolute;
@@ -579,7 +669,16 @@ h2 {
             display: flex;
             width: 191px;
             justify-content: space-between;
-            // border: solid 2px goldenrod;
+            @include reponsive(tablette) {
+                width: 98px;
+                left: 0;
+                top: 8px;
+                & img {
+                    height: 13px;
+                }
+            }
+            @include reponsive(phone) {
+            }
         }
     }
 }
@@ -589,6 +688,15 @@ h2 {
     justify-content: space-between;
     gap: 6%;
     margin-bottom: 50px;
+    width: 32px;
+    height: 32px;
+    @include reponsive(tablette) {
+        margin-top: 50px;
+    }
+    @include reponsive(phone) {
+        margin-top: 50px;
+        border: solid blue 2px;
+    }
     &__left {
         width: 100%;
     }
