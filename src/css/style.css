@@ -94,6 +94,7 @@ h2 {
   @media (max-width: 450px) {
     .main {
       margin: 0px 20px;
+      margin-bottom: 27px;
       gap: 20px; } }
 
 .banner {
@@ -539,17 +540,20 @@ h2 {
 .logement-collapses {
   display: flex;
   justify-content: space-between;
-  gap: 6%;
+  gap: 20px;
   margin-bottom: 50px;
   width: 32px;
   height: 32px; }
   @media (max-width: 960px) {
     .logement-collapses {
-      margin-top: 50px; } }
+      margin-top: 50px;
+      flex-direction: column;
+      margin-bottom: 0px; } }
   @media (max-width: 450px) {
     .logement-collapses {
       margin-top: 50px;
-      border: solid blue 2px; } }
+      height: 100%;
+      width: 100%; } }
   .logement-collapses__left {
     width: 100%; }
   .logement-collapses__right {
@@ -559,6 +563,12 @@ h2 {
   list-style-type: none; }
   .isList ul li {
     font-size: 1.4rem; }
+    @media (max-width: 960px) {
+      .isList ul li {
+        font-size: 1.3rem; } }
+    @media (max-width: 450px) {
+      .isList ul li {
+        font-size: 1.2rem; } }
 
 .error-page {
   display: flex;
