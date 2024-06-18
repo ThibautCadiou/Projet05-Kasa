@@ -224,7 +224,7 @@ h2 {
   position: relative; }
   @media (max-width: 960px) {
     .collapse {
-      width: 85%; } }
+      width: 100%; } }
   @media (max-width: 450px) {
     .collapse {
       width: 100%; } }
@@ -417,9 +417,11 @@ h2 {
 
 .logement-info {
   display: flex;
-  flex-direction: column;
   width: 100%;
   justify-content: space-between; }
+  @media (max-width: 960px) {
+    .logement-info {
+      flex-direction: column; } }
   .logement-info-left {
     width: 50%;
     position: relative; }
@@ -479,11 +481,11 @@ h2 {
       .logement-info-right {
         width: 100%;
         height: 33px;
-        margin: 16px 0px; } }
+        margin-top: 16px; } }
     @media (max-width: 450px) {
       .logement-info-right {
         height: 33px;
-        margin: 16px 0px; } }
+        margin-top: 16px; } }
     .logement-info-right__owner-image {
       position: absolute;
       top: 0;
@@ -510,12 +512,18 @@ h2 {
         border-radius: 50%; }
     .logement-info-right__owner-infos {
       position: absolute;
-      right: calc(32px + 10px);
+      right: calc(64px + 10px);
       display: flex;
       flex-direction: column;
       color: #ff6060;
       font-size: 1.8rem;
       align-items: flex-end; }
+      @media (max-width: 960px) {
+        .logement-info-right__owner-infos {
+          right: calc(48px + 10px); } }
+      @media (max-width: 450px) {
+        .logement-info-right__owner-infos {
+          right: calc(32px + 10px); } }
       @media (max-width: 960px) {
         .logement-info-right__owner-infos p {
           font-size: 15px; } }
@@ -540,19 +548,22 @@ h2 {
 .logement-collapses {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
-  margin-bottom: 50px;
-  width: 32px;
-  height: 32px; }
+  gap: 56px;
+  margin-bottom: 50px; }
   @media (max-width: 960px) {
     .logement-collapses {
-      margin-top: 50px;
+      margin-top: 0px;
       flex-direction: column;
-      margin-bottom: 0px; } }
+      gap: 38px;
+      margin-bottom: 30px;
+      width: 100%; } }
   @media (max-width: 450px) {
     .logement-collapses {
-      margin-top: 50px;
+      flex-direction: column;
+      margin-top: 0px;
       height: 100%;
+      gap: 20px;
+      margin-bottom: 0px;
       width: 100%; } }
   .logement-collapses__left {
     width: 100%; }
