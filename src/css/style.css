@@ -243,6 +243,18 @@ h2 {
   padding-top: 13px;
   background-color: #ff6060;
   border-radius: 5px; }
+  @media (max-width: 960px) {
+    .collapse__header__title {
+      height: 40px;
+      font-size: 18px;
+      padding-left: 10px;
+      padding-top: 9px; } }
+  @media (max-width: 450px) {
+    .collapse__header__title {
+      height: 30px;
+      font-size: 13px;
+      padding-left: 10px;
+      padding-top: 7px; } }
 
 .collapse__content {
   background-color: #f6f6f6;
@@ -252,6 +264,14 @@ h2 {
   font-size: 1.4rem;
   font-weight: 400;
   border-radius: 0px 0px 5px 5px; }
+  @media (max-width: 960px) {
+    .collapse__content {
+      font-size: 13px;
+      padding: 15px 30px 15px 30px; } }
+  @media (max-width: 450px) {
+    .collapse__content {
+      font-size: 12px;
+      padding: 13px; } }
 
 .fa-chevron-up,
 .fa-chevron-down {
@@ -259,6 +279,17 @@ h2 {
   right: 15px;
   top: 15px;
   color: white; }
+  @media (max-width: 960px) {
+    .fa-chevron-up,
+    .fa-chevron-down {
+      right: 10px;
+      top: 9px; } }
+  @media (max-width: 450px) {
+    .fa-chevron-up,
+    .fa-chevron-down {
+      right: 10px;
+      top: 10px;
+      font-size: 18px; } }
 
 .collapse__icon--open {
   animation-name: rotateChevronOpening;

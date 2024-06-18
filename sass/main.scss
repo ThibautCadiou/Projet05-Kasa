@@ -291,7 +291,6 @@ h2 {
 
 .collapse {
     width: 70%;
-
     height: fit-content;
     border-radius: 5px;
     position: relative;
@@ -320,6 +319,21 @@ h2 {
     padding-top: 13px;
     background-color: $my-red;
     border-radius: 5px;
+    @include reponsive(tablette) {
+        height: 40px;
+        font-size: 18px;
+
+        padding-left: 10px;
+        padding-top: 9px;
+    }
+
+    @include reponsive(phone) {
+        height: 30px;
+        font-size: 13px;
+
+        padding-left: 10px;
+        padding-top: 7px;
+    }
 }
 
 .collapse__content {
@@ -330,6 +344,15 @@ h2 {
     font-size: 1.4rem;
     font-weight: 400;
     border-radius: 0px 0px 5px 5px;
+    @include reponsive(tablette) {
+        font-size: 13px;
+        padding: 15px 30px 15px 30px;
+    }
+
+    @include reponsive(phone) {
+        font-size: 12px;
+        padding: 13px;
+    }
 }
 
 .fa-chevron-up,
@@ -338,6 +361,17 @@ h2 {
     right: 15px;
     top: 15px;
     color: white;
+
+    @include reponsive(tablette) {
+        right: 10px;
+        top: 9px;
+    }
+
+    @include reponsive(phone) {
+        right: 10px;
+        top: 10px;
+        font-size: 18px;
+    }
 }
 
 .collapse__icon--open {
