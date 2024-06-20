@@ -26,7 +26,11 @@ export default function Collapse(props) {
         return (
             <div className="collapse">
                 <div className="collapse__header">
-                    <span className="collapse__header__title">{props.obj.title}</span>
+                    {props.obj.title.indexOf("quipements") !== -1 || props.obj.title === "Description" ? (
+                        <span className="collapse__header__title setFontsizeForPageLogement">{props.obj.title}</span>
+                    ) : (
+                        <span className="collapse__header__title">{props.obj.title}</span>
+                    )}{" "}
                     {isFirstOpening ? (
                         <i className="fa-solid fa-chevron-up" onClick={toggleCollapse}></i>
                     ) : (
@@ -40,7 +44,7 @@ export default function Collapse(props) {
             <div className="collapse">
                 <div className="collapse__header">
                     {/* <span className="collapse__header__title">{props.obj.title}</span> */}
-                    {props.obj.title === "Equipement" || props.obj.title === "Description" ? (
+                    {props.obj.title.indexOf("quipements") !== -1 || props.obj.title === "Description" ? (
                         <span className="collapse__header__title setFontsizeForPageLogement">{props.obj.title}</span>
                     ) : (
                         <span className="collapse__header__title">{props.obj.title}</span>
@@ -53,8 +57,8 @@ export default function Collapse(props) {
                 </div>
 
                 {isOpen ? (
-                    <div className={props.obj.title === "Equipement" ? "collapse__content collapse--show isList" : "collapse__content collapse--show"}>
-                        {props.obj.title === "Equipement" ? (
+                    <div className={props.obj.title.indexOf("quipements") !== -1 ? "collapse__content collapse--show isList" : "collapse__content collapse--show"}>
+                        {props.obj.title.indexOf("quipements") !== -1 ? (
                             <ul>
                                 {props.obj.parapgraphe.map((elt, index) => (
                                     <li key={index}>{elt}</li>

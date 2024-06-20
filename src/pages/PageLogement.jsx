@@ -15,7 +15,7 @@ export default function PageLogement({ logementObj }) {
     };
 
     const messageEquipement = {
-        title: "Equipement",
+        title: "Équipements",
         parapgraphe: logementObj.equipments,
     };
 
@@ -78,11 +78,8 @@ export default function PageLogement({ logementObj }) {
                 </div>
             </div>
             <div className="logement-collapses">
-                {/* <p className="logement-collapses__left"> */}
                 <Collapse obj={messageDescription} />
                 <Collapse obj={messageEquipement} />
-
-                {/* <p className="logement-collapses__right">B</p> */}
             </div>
         </div>
     );
