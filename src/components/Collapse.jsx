@@ -7,6 +7,7 @@ export default function Collapse(props) {
     const [isFirstOpening, setIsFirstOpening] = useState(true);
     const [isAnimationFinished, setisAnimationFinished] = useState(false);
 
+    // console.log(screen.width); // il suffisait d'utiliser ca pour les mise en forme conditionnel surlguerran ...
     const toggleCollapse = () => {
         setIsOpen(!isOpen);
         if (!isOpen) {
