@@ -670,3 +670,18 @@ footer {
         width: 130px;
         font-size: 12px;
         align-items: center; } }
+
+.setFontsizeForPageLogement {
+  font-size: 18px;
+  padding-left: 15px;
+  padding-top: 15px; }
+  @media (max-width: 960px) {
+    .setFontsizeForPageLogement {
+      font-size: 15px;
+      padding-left: 10px;
+      padding-top: 9px; } }
+  @media (max-width: 450px) {
+    .setFontsizeForPageLogement {
+      font-size: 13px;
+      padding-left: 10px;
+      padding-top: 7px; } }

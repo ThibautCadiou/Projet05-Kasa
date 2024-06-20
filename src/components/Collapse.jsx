@@ -39,7 +39,12 @@ export default function Collapse(props) {
         return (
             <div className="collapse">
                 <div className="collapse__header">
-                    <span className="collapse__header__title">{props.obj.title}</span>
+                    {/* <span className="collapse__header__title">{props.obj.title}</span> */}
+                    {props.obj.title === "Equipement" || props.obj.title === "Description" ? (
+                        <span className="collapse__header__title setFontsizeForPageLogement">{props.obj.title}</span>
+                    ) : (
+                        <span className="collapse__header__title">{props.obj.title}</span>
+                    )}
                     {isFirstOpening ? (
                         <i className="fa-solid fa-chevron-up" onClick={toggleCollapse}></i>
                     ) : (
