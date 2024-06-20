@@ -142,6 +142,8 @@ h2 {
 
     @include reponsive(tablette) {
         margin: 0 20px;
+        margin-bottom: 30px;
+
         gap: 30px;
     }
 
@@ -312,10 +314,6 @@ h2 {
     border-radius: 5px;
     position: relative;
 
-    @include reponsive(tablette) {
-    }
-    @include reponsive(phone) {
-    }
     @include reponsive(tablette) {
         width: 100%;
     }
@@ -836,6 +834,7 @@ footer {
         color: white;
         // align-items: baseline;
         font-weight: 500;
+        margin-top: 28px;
         @include reponsive(phone) {
             flex-direction: column;
             justify-content: center;

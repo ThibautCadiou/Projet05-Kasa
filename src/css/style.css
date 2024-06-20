@@ -94,6 +94,7 @@ h2 {
   @media (max-width: 960px) {
     .main {
       margin: 0 20px;
+      margin-bottom: 30px;
       gap: 30px; } }
   @media (max-width: 450px) {
     .main {
@@ -659,7 +660,8 @@ footer {
   footer p {
     display: flex;
     color: white;
-    font-weight: 500; }
+    font-weight: 500;
+    margin-top: 28px; }
     @media (max-width: 450px) {
       footer p {
         flex-direction: column;
