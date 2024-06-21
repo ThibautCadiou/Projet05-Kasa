@@ -15,7 +15,7 @@ export default function Collapse(props) {
         } else {
             setTimeout(() => {
                 setisAnimationFinished(true);
-            }, 190);
+            }, 200);
         }
 
         if (isFirstOpening) {
@@ -31,7 +31,7 @@ export default function Collapse(props) {
                         <span className="collapse__header__title setFontsizeForPageLogement">{props.obj.title}</span>
                     ) : (
                         <span className="collapse__header__title">{props.obj.title}</span>
-                    )}{" "}
+                    )}
                     {isFirstOpening ? (
                         <i className="fa-solid fa-chevron-up" onClick={toggleCollapse}></i>
                     ) : (

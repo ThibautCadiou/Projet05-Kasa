@@ -10,7 +10,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 10px; }
+  font-size: 10px;
+  margin: auto; }
 
 .header {
   display: flex;
@@ -232,7 +233,7 @@ h2 {
       margin-bottom: 0px; } }
 
 .collapse {
-  width: 70%;
+  width: 82%;
   height: fit-content;
   border-radius: 5px;
   position: relative; }
@@ -308,17 +309,17 @@ h2 {
 
 .collapse__icon--open {
   animation-name: rotateChevronOpening;
-  animation-duration: 0.2s;
+  animation-duration: 0.25s;
   animation-timing-function: ease-out; }
 
 .collapse__icon--close {
   animation-name: rotateChevronClosing;
-  animation-duration: 0.2s;
+  animation-duration: 0.25s;
   animation-timing-function: ease-out; }
 
 .collapse--show {
   animation-name: translateCollapsingElementOpening;
-  animation-duration: 0.2s;
+  animation-duration: 0.25s;
   animation-timing-function: ease-out;
   z-index: 1;
   position: relative; }
@@ -350,7 +351,7 @@ h2 {
     transform: translateY(0%); } }
 
 .collapse--hide {
-  animation: translateCollapsingElementClosing ease-out 0.2s;
+  animation: translateCollapsingElementClosing ease-out 0.25s;
   z-index: 1;
   position: relative; }
 

@@ -2,7 +2,7 @@
 $my-color: pink;
 $light-grey: #f6f6f6;
 $my-red: #ff6060;
-$animation-time: 0.2s;
+$animation-time: 0.25s;
 
 * {
     margin: 0;
@@ -23,6 +23,7 @@ $animation-time: 0.2s;
     box-sizing: border-box;
 
     font-size: 10px;
+    margin: auto;
 }
 
 // ******** MIXIN MANAGER ******** //
@@ -308,7 +309,7 @@ h2 {
 }
 
 .collapse {
-    width: 70%;
+    width: 82%;
     height: fit-content;
     border-radius: 5px;
     position: relative;
