@@ -73,7 +73,7 @@ export default function PageLogement({ logementObj }) {
                         <p>{lastName}</p>
                     </div>
                     <div className="logement-info-right__owner-ratings">
-                        <Star starsNumber={3}></Star>
+                        <Star starsNumber={logementObj.rating}></Star>
                     </div>
                 </div>
             </div>
