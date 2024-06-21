@@ -70,7 +70,17 @@ export default function Collapse(props) {
                         )}
                     </div>
                 ) : (
-                    <div className={isFirstOpening ? "hide" : "collapse__content collapse--hide"}>{props.obj.parapgraphe}</div>
+                    <div className={isFirstOpening ? "hide" : props.obj.title.indexOf("quipements") !== -1 ? "collapse__content collapse--hide isList" : "collapse__content collapse--hide"}>
+                        {props.obj.title.indexOf("quipements") !== -1 ? (
+                            <ul>
+                                {props.obj.parapgraphe.map((elt, index) => (
+                                    <li key={index}>{elt}</li>
+                                ))}
+                            </ul>
+                        ) : (
+                            props.obj.parapgraphe
+                        )}
+                    </div>
                 )}
             </div>
         );
