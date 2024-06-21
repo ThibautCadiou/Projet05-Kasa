@@ -318,11 +318,17 @@ h2 {
   animation-timing-function: ease-out; }
 
 .collapse--show {
-  animation-name: translateCollapsingElementOpening;
+  animation-name: translateCollapsingElementOpening__desktop;
   animation-duration: 0.25s;
   animation-timing-function: ease-out;
   z-index: 1;
   position: relative; }
+  @media (max-width: 960px) {
+    .collapse--show {
+      animation-name: translateCollapsingElementOpening__tablette; } }
+  @media (max-width: 450px) {
+    .collapse--show {
+      animation-name: translateCollapsingElementOpening__phone; } }
 
 @keyframes rotateChevronOpening {
   0% {
@@ -336,7 +342,21 @@ h2 {
   100% {
     transform: rotate(0deg); } }
 
-@keyframes translateCollapsingElementOpening {
+@keyframes translateCollapsingElementOpening__desktop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%); }
+  10% {
+    opacity: 0;
+    transform: translateY(-54px); }
+  11% {
+    opacity: 1;
+    transform: translateY(-54px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0%); } }
+
+@keyframes translateCollapsingElementOpening__tablette {
   0% {
     opacity: 0;
     transform: translateY(-100%); }
@@ -350,15 +370,49 @@ h2 {
     opacity: 1;
     transform: translateY(0%); } }
 
+@keyframes translateCollapsingElementOpening__phone {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%); }
+  10% {
+    opacity: 0;
+    transform: translateY(-30px); }
+  11% {
+    opacity: 1;
+    transform: translateY(-30px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0%); } }
+
 .collapse--hide {
-  animation: translateCollapsingElementClosing ease-out 0.25s;
+  animation: translateCollapsingElementClosing__desktop ease-out 0.25s;
   z-index: 1;
   position: relative; }
+  @media (max-width: 960px) {
+    .collapse--hide {
+      animation: translateCollapsingElementClosing__tablette ease-out 0.25s; } }
+  @media (max-width: 450px) {
+    .collapse--hide {
+      animation: translateCollapsingElementClosing__phone ease-out 0.25s; } }
 
 .hide {
   display: none; }
 
-@keyframes translateCollapsingElementClosing {
+@keyframes translateCollapsingElementClosing__desktop {
+  0% {
+    opacity: 1;
+    transform: translateY(0%); }
+  90% {
+    opacity: 1;
+    transform: translateY(-54px); }
+  91% {
+    opacity: 0;
+    transform: translateY(-54px); }
+  100% {
+    opacity: 1;
+    transform: translateY(-100%); } }
+
+@keyframes translateCollapsingElementClosing__tablette {
   0% {
     opacity: 1;
     transform: translateY(0%); }
@@ -368,6 +422,20 @@ h2 {
   91% {
     opacity: 0;
     transform: translateY(-40px); }
+  100% {
+    opacity: 1;
+    transform: translateY(-100%); } }
+
+@keyframes translateCollapsingElementClosing__phone {
+  0% {
+    opacity: 1;
+    transform: translateY(0%); }
+  90% {
+    opacity: 1;
+    transform: translateY(-30px); }
+  91% {
+    opacity: 0;
+    transform: translateY(-30px); }
   100% {
     opacity: 1;
     transform: translateY(-100%); } }
