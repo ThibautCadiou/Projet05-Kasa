@@ -7,7 +7,7 @@ export default function Banner(props) {
     if (props.msg === "") {
         haveMessage = false;
         backgroundImageStyle = {
-            backgroundImage: `url(${props.backgroundImageUrl})`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${props.backgroundImageUrl})`,
         };
     } else {
         backgroundImageStyle = {
