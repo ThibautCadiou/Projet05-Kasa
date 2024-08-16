@@ -2,14 +2,14 @@
   "name": "kasa",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://github.com/ThibautCadiou/Projet05-Kasa.git",
+  "homepage": "https://thibautcadiou.github.io/Projet05-Kasa/",
   "type": "module",
   "scripts": {
     "compile:sass": "node-sass sass/main.scss src/css/style.css -w",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "predeploy": "npm run build",
+    "predeploy": "npm run dev",
     "deploy": "gh-pages -d build",
     "preview": "vite preview"
   },
