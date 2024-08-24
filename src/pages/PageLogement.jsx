@@ -56,7 +56,7 @@ export default function PageLogement({ logementObj }) {
         {hasOnePicture && (
           <img
             className="logement-caroussel__left-arrow"
-            src="./src/assets/arrow-left.svg"
+            src="/arrow-left.svg"
             alt="fleche gauche"
             onClick={decreaseImageIndex}
           />
@@ -64,14 +64,13 @@ export default function PageLogement({ logementObj }) {
         {hasOnePicture && (
           <img
             className="logement-caroussel__right-arrow"
-            src="./src/assets/arrow-right.svg"
+            src="/arrow-right.svg"
             alt="fleche droite"
             onClick={increaseImageIndex}
           />
         )}
         {hasOnePicture && (
           <p className="logement-caroussel__nbImage">
-            {" "}
             {`${currentImageIndex}/${nbImages}`}
           </p>
         )}
