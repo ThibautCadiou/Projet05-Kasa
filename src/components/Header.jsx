@@ -1,5 +1,5 @@
 import PageNav from "./PageNav";
-import logo from "../assets/logo-desktop.svg";
+import logo from "/logo-desktop.svg";
 
 function Header() {
   return (
